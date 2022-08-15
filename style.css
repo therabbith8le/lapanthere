@@ -1049,4 +1049,9 @@ h4 {
     .bloc-mob-center-text {
         text-align: center;
     }
+    .displayed {
+        display: block;
+        margin-left: auto;
+        margin-right: auto
+    }
 }
