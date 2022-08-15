@@ -1052,6 +1052,31 @@ h4 {
     .displayed {
         display: block;
         margin-left: auto;
-        margin-right: auto
+        margin-right: auto;
     }
+}
+
+.contact { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45px;
+    text-align: center;
+}
+
+.lk { 
+    display:flex;
+    flex-direction:column;
+    line-height: 3;
+}
+
+.lk a:hover {
+    color: #FDD835!important;
+}
+
+.horaire {
+    color: #575757!important;
+    font-weight: 600;
+    margin-top: 15px;
 }

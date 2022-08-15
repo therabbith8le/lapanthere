@@ -49,9 +49,15 @@
 				<div class="container bloc-sm">
 					<nav class="navbar row">
 						<div class="navbar-header">
-							<a class="navbar-brand" href="index.html"><img src="img/agence-la-panthere-monochrome.svg" alt="atlanta web design logo" height="40" /></a>
+							<a class="navbar-brand" href="index.html">
+								<!--modify alt & logo file into png-->
+								<img src="img/agence-la-panthere-monochrome.png" alt="logo panthère" height="40" />
+							</a>
 							<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
-								<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
 							</button>
 						</div>
 						<div class="collapse navbar-collapse navbar-1 special-dropdown-nav">
@@ -59,10 +65,10 @@
 								<li>
 									<a href="index.html">Accueil</a>
 								</li>
+								<!--remove useless li tag-->
 								<li>
-								</li>
-								<li>
-									<a href="page2.html">page2</a>
+									<!--rename file & text into contact-->
+									<a href="contact.html">Contact</a>
 								</li>
 							</ul>
 						</div>
@@ -93,40 +99,50 @@
 			<div class="bloc bgc-white l-bloc" id="bloc-7">
 				<div class="container bloc-lg">
 					<div class="row">
-						<div class="col-sm-6">
-							<form id="form_1" novalidate success-msg="Your message has been sent." fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
-								<div class="form-group">
-									<label>
-										Nom
-									</label>
-									<input id="name" class="form-control" required />
-								</div>
-								<div class="form-group">
-									<label>
-										Adresse email
-									</label>
-									<input id="email" class="form-control" type="email" required />
-								</div>
-								<div class="form-group">
-									<label>
-										Comment nous avez-vous connu ?
-									</label>
-									<input class="form-control" type="email" required id="input_504" />
-								</div>
-								<div class="form-group">
-									<label>
-										Brief de votre projet (Ajoutez autant de détails que nécessaire)<br>
-									</label><textarea id="message" class="form-control" rows="4" cols="50" required></textarea>
-								</div> 
-								<button class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit">
-									Envoyer
-								</button>
-							</form>
-						</div>
-						<div class="col-sm-6">
-							<p>
-								contact@agencelapanthere.com<br>2 place Sathonay 69001 Lyon<br>Ouvert de 9h à 18h, du lundi au vendredi<br>
-							</p>
+						<div class="col-sm-12">
+							<div class="col-sm-6">
+								<!--update form for action-->
+								<form method="post" action="includes/form_1.php" id="form_1" novalidate>
+									<div class="form-group">
+										<label for="name">Nom</label>
+										<input id="name" name="name" class="form-control" type="text"/>
+									</div>
+									<div class="form-group">
+										<label for="email">
+											Adresse email
+										</label>
+										<input id="email" name="email" class="form-control" type="email" required autofocus/>
+									</div>
+									<div class="form-group">
+										<label for="info"> Comment nous avez-vous connus ?</label>
+										<select name="info" id="info">
+											<option value="connaissance">Part une connaissance.</option>
+											<option value="web" selected>En navigant sur Internet.</option>
+											<option value="réseaux sociaux">En surfant sur les réseaux sociaux.</option>
+										</select>								
+									</div>
+									<div class="form-group">
+										<label for="message">
+											Brief de votre projet (Ajoutez autant de détails que nécessaire)<br>
+										</label>
+										<textarea id="message"
+											name="message"
+											class="form-control" 
+											minlength="10"
+											rows="4" cols="50" required>
+										</textarea>
+									</div> 
+									<input class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit" value="Envoyer" />
+								</form>
+							</div>
+							<div class="col-sm-6 contact">
+								<!--create links for contact & location-->
+								<p class="lk">
+									<a href="mailto:contact@lachouetteagence.com">contact@lachouetteagence.com</a>
+									<a href="https://www.google.com/maps/place/2+Place+Sathonay,+69001+Lyon/@45.7695241,4.8279786,17z/data=!3m1!4b1!4m5!3m4!1s0x47f4eb020f3664e9:0x13e3d71752922c1f!8m2!3d45.7695241!4d4.8301673">2 place Sathonay 69001 Lyon</a>
+								</p>
+								<p class="horaire">Ouvert de 9h à 18h, du lundi au vendredi</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -143,28 +159,30 @@
 				<div class="container bloc-sm">
 					<div class="row">
 						<div class="col-sm-12">
-							<p class="text-center white">
-								Agence La Panthère - Agence web basée à Lyon.<br>
-							</p>
-							<div class="row row-no-gutters social">
-								<div class="col-sm-3">
-									<div class="text-center">
-										<a class="social" href="index.html"><span class="fa fa-twitter icon-md"></span></a>
+							<div class="col-md-6">
+								<p class="text-center white">
+									Agence La Panthère - Agence web basée à Lyon.<br>
+								</p>
+								<div class="row row-no-gutters social">
+									<div class="col-sm-3">
+										<div class="text-center">
+											<a class="social" href="index.html"><span class="fa fa-twitter icon-md"></span></a>
+										</div>
 									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="text-center">
-										<a class="social" href="index.html"><span class="fa fa-facebook icon-md"></span></a>
+									<div class="col-sm-3">
+										<div class="text-center">
+											<a class="social" href="index.html"><span class="fa fa-facebook icon-md"></span></a>
+										</div>
 									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="text-center">
-										<a class="social" href="index.html"><span class="fa fa-dribbble icon-md"></span></a>
+									<div class="col-sm-3">
+										<div class="text-center">
+											<a class="social" href="index.html"><span class="fa fa-dribbble icon-md"></span></a>
+										</div>
 									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="text-center">
-										<a class="social" href="index.html"><span class="fa fa-instagram icon-md"></span></a>
+									<div class="col-sm-3">
+										<div class="text-center">
+											<a class="social" href="index.html"><span class="fa fa-instagram icon-md"></span></a>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -177,9 +195,9 @@
 		</div>
 		<!-- Principal conteneur END -->
 			
-		<script src="./js/jquery-2.1.0.min.js"></script>
-		<script src="./js/bootstrap.min.js"></script>
-		<script src="./js/blocs.min.js"></script>
+		<script src="./js/jquery-2.1.0.js"></script>
+		<script src="./js/bootstrap.js"></script>
+		<script src="./js/blocs.js"></script>
 		<script src="./js/jqBootstrapValidation.js"></script>
 		<script src="./js/formHandler.js"></script>
 
